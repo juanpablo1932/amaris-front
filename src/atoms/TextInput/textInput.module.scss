@@ -37,18 +37,3 @@
   bottom: -16px;
   height: 16px;
 }
-
-@media (max-width: 600px) {
-  .inputLabel {
-    display: none;
-  }
-  .inputs {
-    width: 67%;
-    margin-left: 3%;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: rgba(222, 222, 222, 1);
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-}

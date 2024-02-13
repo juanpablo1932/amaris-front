@@ -1,13 +1,13 @@
 import Profile from "../../templates/Profile";
-import MainProfileHeader from "../../molecules/MainProfileHeader";
-// import DesplegableMenu from "../../organisms/DesplegableMenu";
+import ManagerData from "../../molecules/ManagerData";
+import DesplegableMenu from "../../organisms/DesplegableMenu";
 
 export default function ModulesPage({ content }) {
   return (
     <>
       <Profile
-        header={<MainProfileHeader />}
-        // navbar={<DesplegableMenu />}
+        header={<ManagerData />}
+        navbar={<DesplegableMenu />}
         content={content}
       />
     </>

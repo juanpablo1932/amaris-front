@@ -9,25 +9,10 @@ export default function Profile(props) {
     <>
       <header className={styles.header}>{props.header}</header>
       <main className={styles.main}>
-        <div
-          className={`${styles.navbarContainer} ${
-            dropdown ? styles.NavWidthDrop : styles.navWidth
-          }`}
-          style={{ heigth: "100%", paddingTop: 4 }}
-        >
+        <div className={`${styles.navbarContainer}`} style={{ heigth: "100%" }}>
           {props.navbar}
         </div>
-        <section
-          className={
-            dropdown === false ? styles.mainContent : styles.mainContentMove
-          }
-        >
-          {props.content}
-
-          <div style={{ position: "relative", width: "100%" }}>
-              {props.footer}
-            </div>
-        </section>
+        <section className={styles.mainContent}>{props.content}</section>
       </main>
     </>
   );

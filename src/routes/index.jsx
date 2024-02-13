@@ -1,29 +1,26 @@
-import { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Protected } from "../atoms/ProtectedRoute/Protected";
 import Login from "../pages/Login";
 import ModulesPage from "../pages/ModulesPage";
-import { UserContext } from "../context/UserContext/UserContext";
+import AppointmentPage from "../pages/AppointmentPage";
 
 const AppRoutes = () => {
-  const { getUser, getRol } = useContext(UserContext);
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
-          path="/aca"
+          exact
+          path="/appointments"
           element={
-            <h1>
-              {getUser}
-              {getRol}
-            </h1>
+            <Protected>
+              <ModulesPage content={<AppointmentPage />} />
+            </Protected>
           }
         />
         <Route
           exact
-          path="/appointments"
+          path="/appointments/manage"
           element={
             <Protected>
               <ModulesPage content={<h1>Estamos dentro</h1>} />

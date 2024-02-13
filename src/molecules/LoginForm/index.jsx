@@ -41,6 +41,7 @@ export default function LoginForm() {
           localStorage.setItem("email", data.user["email"]);
           localStorage.setItem("name", data.user["full_name"]);
           localStorage.setItem("rol", data.user["rol"]);
+          localStorage.setItem("id", data.user["id"]);
           setIsLoading(false);
           if (data.statusCode === 200) window.location.href = "/appointments";
         }}
@@ -100,7 +101,7 @@ export default function LoginForm() {
               </div>
             </div>
             <div className={styles.btnContainer}>
-              <Button type="submit" text="Login" />
+              <Button type="submit" text="Login" className={styles.button} />
             </div>
           </Form>
         )}

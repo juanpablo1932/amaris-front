@@ -4,7 +4,7 @@ import { UserContext } from "./UserContext";
 export const UserProvider = ({ children }) => {
   const [getUser, setGetUser] = useState();
   const [getRol, setGetRol] = useState();
-  console.log(getUser);
+  const [getId, setId] = useState();
   const [loaded, setLoaded] = useState(false);
 
   function getItem(name) {
@@ -23,10 +23,12 @@ export const UserProvider = ({ children }) => {
     if (name) setGetUser(name);
     const rol = getItem("rol");
     if (rol) setGetRol(rol);
+    const id = getItem("id");
+    if (id) setId(id);
   }, [loaded, setGetUser, getUser, setGetRol, getRol]);
 
   return (
-    <UserContext.Provider value={{ getUser, setGetUser, getRol }}>
+    <UserContext.Provider value={{ getUser, setGetUser, getRol, getId }}>
       {children}
     </UserContext.Provider>
   );
