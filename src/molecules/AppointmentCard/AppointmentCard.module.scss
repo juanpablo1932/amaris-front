@@ -1,68 +1,20 @@
 @import "../../styles/variables.scss";
 
-.AppointmentCardContainer {
-  border: solid 1px;
-  border-color: $primaryColor;
-  border-radius: 15px;
-  width: 450px;
-  height: 300px;
+.modalContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 0 10px;
-}
-
-.staffInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
-
-  p {
-    margin: 0;
-    color: #49454f;
-  }
-}
-
-.patientInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
-
-  p {
-    margin: 0;
-    color: #49454f;
-  }
-}
-
-.date {
-  font-size: 20px;
+  justify-content: center;
   color: black;
-  font-weight: bold;
-}
-
-.label {
-  font-size: 16px;
-  color: #49454f;
-  font-weight: bold;
 }
 
 .buttonsContainer {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
-.deleteAppointment {
+.btnsModal {
   background-color: white;
+  border: none;
   color: $primaryColor;
-  border-color: $primaryColor;
-  border-radius: 25px;
-}
-
-.updateAppointment {
-  background-color: $primaryColor;
-  color: white;
-  border-color: $primaryColor;
-  border-radius: 25px;
 }
