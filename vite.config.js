@@ -10,7 +10,7 @@ export default defineConfig({
   define:{
     global:'window'
   },
-  envDir: 'environments',
+  // envDir: 'environments',
   optimizeDeps: {
     disabled: false,
   },

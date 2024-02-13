@@ -1,0 +1,86 @@
+@import "../../styles/variables.scss";
+
+.userContainer {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.iconArrow {
+  cursor: pointer;
+  width: 10px;
+}
+
+.modalUser {
+  position: absolute;
+  right: 20px;
+  width: 150px;
+  min-height: 72px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 100000000;
+}
+
+.userOption {
+  display: grid;
+  grid-template-columns: 35px auto;
+  padding: 9px;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid #dedede;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userName {
+  font-size: 12px;
+  font-family: "Gilroy-Regular";
+  color: $primaryColor;
+}
+.userRol {
+  font-size: 10px;
+  font-family: "Gilroy-Regular";
+  color: $primaryColor;
+}
+
+.logoutButton {
+  width: 100%;
+  margin: 9px auto;
+}
+
+@media (min-width: 1367px) {
+  .modalUser {
+    width: 170px;
+  }
+  .userName {
+    font-size: 14px;
+  }
+   .userRol {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modalUser {
+    width: 125px;
+  }
+  .userName {
+    font-size: 10px;
+  }
+  .userRol {
+    font-size: 8px;
+  }
+
+  .userOption {
+    grid-template-columns: 30px auto;
+
+  }
+}

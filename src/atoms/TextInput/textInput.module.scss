@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.inputLabel {
+  margin-bottom: 2vh;
+  margin-left: 1vh;
+  margin-top: 4vh;
+}
+
+.inputContainer {
+  position: relative;
+}
+.inputs {
+  font-family: Gilroy-Regular;
+  border: none;
+  border-bottom: 1px solid;
+  border-color: rgba(210, 217, 233, 1);
+  padding: 1vh;
+  outline-color: $primaryColor;
+  // fix firefox multiprocess
+  background-color: white;
+
+  width: 100%;
+}
+
+.labelEmail {
+  position: absolute;
+  right: 0px;
+}
+
+.error {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.roles {
+  position: absolute;
+  bottom: -16px;
+  height: 16px;
+}
+
+@media (max-width: 600px) {
+  .inputLabel {
+    display: none;
+  }
+  .inputs {
+    width: 67%;
+    margin-left: 3%;
+    border: 1px solid;
+    border-radius: 16px;
+    border-color: rgba(222, 222, 222, 1);
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
