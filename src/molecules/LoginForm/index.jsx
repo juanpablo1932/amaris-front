@@ -70,7 +70,7 @@ export default function LoginForm() {
                 <TextInput
                   label="Contraseña"
                   name="password"
-                  type="text"
+                  type="password"
                   className={styles.label}
                   classInput={styles.classInput}
                   customInputContainer={styles.customInputContainer}

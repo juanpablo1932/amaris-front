@@ -1,8 +1,15 @@
-# React + Vite
+# Datos de acceso como Administrador
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- email: staff-amaris@test.com
+- password: admin123
+- Rol: Administrador
 
-Currently, two official plugins are available:
+# Datos de acceso como Paciente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- email: patient-amaris@test.com
+- password: test123
+- Rol: Paciente
+
+# Observaciones
+
+- La creación de citas se debe realizar por medio de Postman
