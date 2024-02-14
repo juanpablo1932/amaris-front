@@ -1,13 +1,35 @@
 import styles from "./Card.module.scss";
 import Button from "../Button";
 
-export default function Card({ date, doctor, type, patient, setOpenModal }) {
+export default function Card({
+  date,
+  doctor,
+  type,
+  patient,
+  setOpenModal,
+  onClickNext,
+}) {
+  function formatDate(isoDate) {
+    const dateObject = new Date(isoDate);
+
+    let monthDay = dateObject.toLocaleString("es-ES", {
+      month: "long",
+      day: "numeric",
+    });
+    let time = dateObject.toLocaleTimeString("es-ES", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    return `${monthDay} - ${time}`;
+  }
+
   return (
     <section className={styles.AppointmentCardContainer}>
       <div className={styles.staffInfo}>
         <p>
           <span className={styles.date}>Fecha: </span>
-          {date}
+          {formatDate(date)}
         </p>
         <p>
           <span className={styles.label}>Doctor Asignado: </span>
@@ -35,6 +57,7 @@ export default function Card({ date, doctor, type, patient, setOpenModal }) {
           type="button"
           text="Actualizar"
           className={styles.updateAppointment}
+          onClick={() => onClickNext()}
         />
       </div>
     </section>

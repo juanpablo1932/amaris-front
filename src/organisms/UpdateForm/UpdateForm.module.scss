@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.form {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 120px;
+  height: 50%;
+  align-items: center;
+}
+
+.inputOption {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+  height: 80%;
+
+  label {
+    font-size: 16px;
+    color: $primaryColor;
+    font-weight: bold;
+  }
+
+  input {
+    background-color: transparent;
+    color: black;
+    height: 60px;
+    border-radius: 15px;
+    border-color: $primaryColor;
+    text-align: center;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 50%;
+  align-items: center;
+}
+
+.nextButton {
+  background-color: $primaryColor;
+  color: white;
+  border-color: $primaryColor;
+  border-radius: 25px;
+}
+
+.backButton {
+  background-color: white;
+  color: $primaryColor;
+  border-color: $primaryColor;
+  border-radius: 25px;
+}

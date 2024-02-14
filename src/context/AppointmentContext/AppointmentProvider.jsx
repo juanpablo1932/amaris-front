@@ -4,6 +4,7 @@ import { AppointmentContext } from "./AppointmentContext";
 export const AppointmentProvider = ({ children }) => {
   const [appointmentList, setAppointmentList] = useState([]);
   const [appointmentByPatient, setAppointmentByPatient] = useState([]);
+  const [updateAppoiment, setUpdateAppoiment] = useState([]);
   return (
     <AppointmentContext.Provider
       value={{
@@ -11,6 +12,8 @@ export const AppointmentProvider = ({ children }) => {
         setAppointmentList,
         appointmentByPatient,
         setAppointmentByPatient,
+        updateAppoiment,
+        setUpdateAppoiment,
       }}>
       {children}
     </AppointmentContext.Provider>

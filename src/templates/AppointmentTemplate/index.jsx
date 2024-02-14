@@ -10,14 +10,15 @@ export default function AppointmentTemplate() {
   const [openModal, setOpenModal] = useState(false);
   const [control, setControl] = useState(false);
   const navigate = useNavigate();
-  const { getId } = useContext(UserContext);
+  const { getId, getRol } = useContext(UserContext);
   const { setAppointmentByPatient, appointmentByPatient } =
     useContext(AppointmentContext);
 
   const handleGetAppointments = async () => {
     const res = await apiInterceptor({
       method: "GET",
-      endpoint: `/appointments/patient/${getId}`,
+      endpoint:
+        getRol === "admin" ? "/appointments" : `/appointments/patient/${getId}`,
     });
     setAppointmentByPatient(res);
     // setIsLoading(false);
@@ -27,19 +28,13 @@ export default function AppointmentTemplate() {
     handleGetAppointments();
   }, [control]);
 
-  console.log(appointmentByPatient);
-
   return (
     <>
       <section className={styles.cardsContainer}>
         {appointmentByPatient.map((appointment) => (
           <AppointmentCard
             key={appointment.id}
-            id={appointment.id}
-            date={appointment.date}
-            doctor={appointment.doctor}
-            type={appointment.type}
-            patient={appointment.patient}
+            appointment={appointment}
             openModal={openModal}
             setOpenModal={setOpenModal}
             setControl={setControl}

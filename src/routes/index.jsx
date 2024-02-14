@@ -3,6 +3,7 @@ import { Protected } from "../atoms/ProtectedRoute/Protected";
 import Login from "../pages/Login";
 import ModulesPage from "../pages/ModulesPage";
 import AppointmentPage from "../pages/AppointmentPage";
+import UpdateCreatePage from "../pages/UpdateCreatePage";
 
 const AppRoutes = () => {
   return (
@@ -20,10 +21,21 @@ const AppRoutes = () => {
         />
         <Route
           exact
-          path="/appointments/manage"
+          path="/appointments/create"
           element={
             <Protected>
-              <ModulesPage content={<h1>Estamos dentro</h1>} />
+              <ModulesPage
+                content={<p style={{ color: "black" }}>CREAR CITAS</p>}
+              />
+            </Protected>
+          }
+        />
+        <Route
+          exact
+          path="/appointments/update"
+          element={
+            <Protected>
+              <ModulesPage content={<UpdateCreatePage />} />
             </Protected>
           }
         />

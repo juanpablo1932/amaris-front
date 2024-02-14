@@ -8,8 +8,12 @@ export default function DesplegableMenu() {
   const navigate = useNavigate();
 
   function navigateHandler() {
-    console.log("navegando");
-    // navigate("/appointments");
+    navigate("/appointments");
+  }
+
+  function logoutHandler() {
+    localStorage.clear();
+    navigate("/");
   }
   const { getRol } = useContext(UserContext);
   return (
@@ -23,23 +27,24 @@ export default function DesplegableMenu() {
             <div className={styles.navItem} onClick={() => navigateHandler()}>
               <p>Visualizar citas</p>
             </div>
-            <div className={styles.navItem}>
-              <p>Editar citas</p>
-            </div>
           </>
         ) : (
           <>
             <div className={styles.navItem} onClick={() => navigateHandler()}>
               <p>Visualizar citas</p>
             </div>
-            <div className={styles.navItem}>
+            <div
+              className={styles.navItem}
+              onClick={() => navigate("/appointments/create")}>
               <p>Crear citas</p>
             </div>
           </>
         )}
       </section>
       <section className={styles.navsContainer}>
-        <p className={styles.login}>LOGIN</p>
+        <p className={styles.login} onClick={() => logoutHandler()}>
+          LOGOUT
+        </p>
       </section>
     </nav>
   );

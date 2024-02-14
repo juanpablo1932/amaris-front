@@ -2,7 +2,6 @@
 
 const apiInterceptor = async ({ method, endpoint, data }) => {
   const url = `${import.meta.env.VITE_API_HOST}${endpoint}`;
-  console.log(import.meta.env.VITE_API_HOST);
   const options = {
     method,
     headers: {
